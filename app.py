@@ -33,6 +33,15 @@ def hello() -> str:
 
     return "Hello, World!"
 
+@app.route("/test")
+def hello() -> str:
+    # Use basic logging with custom fields
+    logger.info(logField="ロギング見てるか〜")
+
+    # https://cloud.google.com/run/docs/logging#correlate-logs
+    logger.info("表示するだけのログ")
+
+    return "テストの表示"
 
 def shutdown_handler(signal_int: int, frame: FrameType) -> None:
     logger.info(f"Caught Signal {signal.strsignal(signal_int)}")
