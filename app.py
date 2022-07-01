@@ -37,7 +37,7 @@ def hello() -> str:
 @app.route("/test")
 def test() -> str:
     # Use basic logging with custom fields
-    logger.info(logField="ロギング見てるか〜")
+    logger.info(hoge="ほげ", huga="ふが")
 
     # https://cloud.google.com/run/docs/logging#correlate-logs
     logger.info("表示するだけのログ")
